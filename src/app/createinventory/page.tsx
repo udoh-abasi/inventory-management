@@ -9,6 +9,7 @@ import Footer from "../footer";
 import NavigationBar from "../nav";
 import { MdOutlineProductionQuantityLimits } from "react-icons/md";
 import { createInventory } from "../(serverActions)/actions";
+import Loader from "../loader";
 
 const CreateInventory = () => {
   const router = useRouter();
@@ -125,7 +126,8 @@ const CreateInventory = () => {
                 <span className="absolute bottom-0 left-0 w-full h-1 transition-all duration-150 ease-in-out bg-black group-hover:h-full"></span>
                 <span className="relative uppercase flex justify-center w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white">
                   <span className="flex items-center gap-2">
-                    <IoIosCreate className="text-2xl" /> <span>Create</span>
+                    <IoIosCreate className="text-2xl" />{" "}
+                    {createLoading ? <Loader /> : <span>Create</span>}
                   </span>
                 </span>
               </button>

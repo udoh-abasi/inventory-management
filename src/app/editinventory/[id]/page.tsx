@@ -166,7 +166,8 @@ const EditInventory = ({ params }: { params: { id: string } }) => {
                   <span className="absolute bottom-0 left-0 w-full h-1 transition-all duration-150 ease-in-out bg-black group-hover:h-full"></span>
                   <span className="relative uppercase flex justify-center w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white">
                     <span className="flex items-center gap-2">
-                      <IoIosCreate className="text-2xl" /> <span>Edit</span>
+                      <IoIosCreate className="text-2xl" />
+                      {editLoading ? <Loader /> : <span>Edit</span>}
                     </span>
                   </span>
                 </button>
