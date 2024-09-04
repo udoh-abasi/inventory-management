@@ -36,7 +36,7 @@ const GetInventory = ({ params }: { params: { id: string } }) => {
 
       <main className="min-h-screen">
         <h1 id="gradient-text" className="text-center text-3xl font-bold mt-8">
-          Contact Details
+          Inventory Details
         </h1>
 
         {dataLoading ? (
